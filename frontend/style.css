@@ -1,0 +1,19 @@
+body {
+  font-family: Arial;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.produto {
+  border: 1px solid black;
+  padding: 10px;
+  width: 200px;
+}
+
+.preco {
+  color: green;
+  font-weight: bold;
+}

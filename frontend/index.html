@@ -1,0 +1,144 @@
+<!DOCTYPE html> <!-- Define que o documento é HTML5 -->
+<html lang="pt-br"> <!-- Início do HTML + idioma português -->
+<head>
+    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
+    <title>Perfumaria</title> <!-- Nome da aba do navegador -->
+
+    <!-- Importa o arquivo CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- Conecta o CSS ao HTML -->
+</head>
+<body> <!-- Início do corpo da página -->
+
+<!-- ================= HEADER ================= --> 
+<header class="header"> <!-- Cabeçalho do site -->
+    
+    <!-- Logo da loja -->
+    <div class="logo">Perfumaria</div> <!-- Nome/logo do site -->
+
+    <!-- Menu de navegação -->
+    <nav> <!-- Área de navegação -->
+
+        <!-- Botão/link para perfumes -->
+        <a href="#" class="btn">Perfumes</a>
+
+        <!-- Botão/link para ofertas -->
+        <a href="#" class="btn">Ofertas</a>
+
+        <!-- Botão/link para pedidos -->
+        <a href="#" class="btn">Meus Pedidos</a>
+
+        <!-- Área do login com menu dropdown -->
+        <div class="menu-login"> <!-- Container do botão de login -->
+
+            <!-- Botão principal -->
+            <a href="#" class="btn">Login/Cadastrar</a>
+
+            <!-- Menu que aparece ao passar o mouse -->
+            <div class="dropdown">
+
+                <!-- Botão para acessar conta -->
+                <button class="acessar">Acessar minha conta</button>
+
+                <!-- Texto + link para cadastro -->
+                <p>
+                    Não tem conta? 
+                    <a href="login.html">Cadastrar</a> <!-- Vai para página de cadastro -->
+                </p>
+
+            </div> <!-- Fim do dropdown -->
+        </div> <!-- Fim do menu-login -->
+
+    </nav> <!-- Fim do menu -->
+</header> <!-- Fim do header -->
+
+<!-- ================= CARROSSEL ================= -->
+<section class="carrossel"> <!-- Seção do carrossel -->
+
+  <!-- Slide 1 -->
+  <div class="slide active"> <!-- Slide visível inicialmente -->
+      <img src="imagens/perfume1.jpg" alt="Promoção 1"> <!-- Imagem -->
+      <div class="texto">texto pro carrossel</div> <!-- Texto sobre imagem -->
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="slide"> <!-- Slide escondido -->
+      <img src="imagens/perfume2.jpg" alt="Promoção 2">
+      <div class="texto">texto pro carrossel</div>
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="slide"> <!-- Slide escondido -->
+      <img src="imagens/perfume3.jpg" alt="Promoção 3">
+      <div class="texto">texto pro carrossel</div>
+  </div>
+
+  <!-- Botões de navegação do carrossel -->
+  <button class="prev">&#10094;</button> <!-- Botão para voltar -->
+  <button class="next">&#10095;</button> <!-- Botão para avançar -->
+
+</section> <!-- Fim do carrossel -->
+
+<!-- ================= PRODUTOS ================= -->
+
+<h1>Perfumaria</h1> <!-- Título principal da página -->
+<br><br> <!-- Espaçamento (não recomendado, melhor usar CSS) -->
+
+<!-- Seção de produtos -->
+<section class="produtos">
+
+    <h2>Mais Vendidos</h2> <!-- Subtítulo -->
+
+    <!-- Container que agrupa os produtos -->
+    <div class="container">
+
+      <!-- Produto 1 -->
+      <div class="produto">
+        <img src="imagens/perfume1.jpg" alt="Perfume A"> <!-- Imagem do produto -->
+        <h2>Million (Paco Rabanne)</h2> <!-- Nome do produto -->
+        <p class="preco">R$ 10,00</p> <!-- Preço -->
+
+        <!-- Área de botões -->
+        <div class="acoes">
+            <button class="comprar">Comprar</button> <!-- Botão de compra -->
+            <button class="carrinho">Adiconar ao Carrinho</button> <!-- Adicionar ao carrinho -->
+            <button class="detalhes">Avaliação</button> <!-- Ver detalhes/avaliação -->
+        </div>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="produto">
+        <img src="imagens/perfume2.jpg" alt="Perfume B">
+        <h2>Y (Yves Saint Laurent)</h2>
+        <p class="preco">R$ 20,00</p>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="produto">
+        <img src="imagens/perfume3.jpg" alt="Perfume C">
+        <h2>Botica 214 (Boticário)</h2>
+        <p class="preco">R$ 30,00</p>
+      </div>
+
+      <!-- Produto 4 -->
+      <div class="produto">
+        <img src="imagens/perfume4.jpg" alt="Perfume D">
+        <h2>Sauvage (Dior)</h2>
+        <p class="preco">R$ 40,00</p>
+      </div>
+
+      <!-- Produto 5 -->
+      <div class="produto">
+        <img src="imagens/perfume5.jpg" alt="Perfume E">
+        <h2>CK One (Calvin Klein)</h2>
+        <p class="preco">R$ 50,00</p>
+      </div>
+
+    </div> <!-- Fim do container -->
+
+</section> <!-- Fim da seção de produtos -->
+
+<!-- Importa o JavaScript -->
+<script src="script.js"></script> <!-- Conecta o JS -->
+
+</body> <!-- Fim do corpo -->
+</html> <!-- Fim do HTML -->

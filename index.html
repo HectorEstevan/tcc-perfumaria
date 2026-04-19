@@ -1,13 +1,11 @@
-<!DOCTYPE html> <!-- Define que o documento é HTML5 -->
-<html lang="pt-br"> <!-- Início do HTML + idioma português -->
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8"> <!-- Permite acentos e caracteres especiais -->
-    <title>Perfumaria</title> <!-- Nome da aba do navegador -->
-
-    <!-- Importa o arquivo CSS -->
-    <link rel="stylesheet" href="style.css"> <!-- Conecta o CSS ao HTML -->
+  <meta charset="UTF-8">
+  <title>Perfumaria</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body> <!-- Início do corpo da página -->
+<body>
 
 <!-- ================= HEADER ================= --> 
 <header class="header"> <!-- Cabeçalho do site -->
@@ -79,64 +77,94 @@
 </section> <!-- Fim do carrossel -->
 
 <!-- ================= PRODUTOS ================= -->
-
+<br><br>
 <h1>Perfumaria</h1> <!-- Título principal da página -->
-<br><br> <!-- Espaçamento (não recomendado, melhor usar CSS) -->
+<br><br>
 
 <!-- Seção de produtos -->
-<section class="produtos">
+<!-- ================= PRODUTOS ================= -->
+<!-- ================= SEÇÃO PRODUTOS ================= -->
+<section class="produtos"> <!-- Área principal dos produtos -->
 
-    <h2>Mais Vendidos</h2> <!-- Subtítulo -->
+  <!-- Título da seção -->
+  <h2>Mais Vendidos</h2>
 
-    <!-- Container que agrupa os produtos -->
-    <div class="container">
+  <!-- Grade onde ficam todos os cards -->
+  <div class="produtos-grid">
 
-      <!-- Produto 1 -->
-      <div class="produto">
-        <img src="imagens/perfume1.jpg" alt="Perfume A"> <!-- Imagem do produto -->
-        <h2>Million (Paco Rabanne)</h2> <!-- Nome do produto -->
-        <p class="preco">R$ 10,00</p> <!-- Preço -->
+      <!-- ================= CARD PRODUTO 1 ================= -->
+      <a href="produto1.html" class="card-produto"> <!-- Card clicável -->
 
-        <!-- Área de botões -->
-        <div class="acoes">
-            <button class="comprar">Comprar</button> <!-- Botão de compra -->
-            <button class="carrinho">Adiconar ao Carrinho</button> <!-- Adicionar ao carrinho -->
-            <button class="detalhes">Avaliação</button> <!-- Ver detalhes/avaliação -->
-        </div>
-      </div>
+          <!-- Etiqueta de desconto -->
+          <span class="desconto">-15%</span>
 
-      <!-- Produto 2 -->
-      <div class="produto">
-        <img src="imagens/perfume2.jpg" alt="Perfume B">
-        <h2>Y (Yves Saint Laurent)</h2>
-        <p class="preco">R$ 20,00</p>
-      </div>
+          <!-- Ícone favorito -->
+          <span class="favorito">♡</span>
 
-      <!-- Produto 3 -->
-      <div class="produto">
-        <img src="imagens/perfume3.jpg" alt="Perfume C">
-        <h2>Botica 214 (Boticário)</h2>
-        <p class="preco">R$ 30,00</p>
-      </div>
+          <!-- Imagem do produto -->
+          <img src="imagens/perfume1.jpg" alt="Perfume Million">
 
-      <!-- Produto 4 -->
-      <div class="produto">
-        <img src="imagens/perfume4.jpg" alt="Perfume D">
-        <h2>Sauvage (Dior)</h2>
-        <p class="preco">R$ 40,00</p>
-      </div>
+          <!-- Marca -->
+          <h3>PACO RABANNE</h3>
 
-      <!-- Produto 5 -->
-      <div class="produto">
-        <img src="imagens/perfume5.jpg" alt="Perfume E">
-        <h2>CK One (Calvin Klein)</h2>
-        <p class="preco">R$ 50,00</p>
-      </div>
+          <!-- Nome do produto -->
+          <p class="nome">Million Eau de Toilette 100ml</p>
 
-    </div> <!-- Fim do container -->
+          <!-- Avaliação -->
+          <div class="stars">★★★★★</div>
 
-</section> <!-- Fim da seção de produtos -->
+          <!-- Preço antigo -->
+          <p class="antigo">R$ 399,90</p>
 
+          <!-- Preço atual -->
+          <p class="preco">R$ 299,90</p>
+
+          <!-- Parcelamento -->
+          <p class="parcelado">10x R$ 29,99</p>
+
+          <!-- Botão carrinho -->
+          <button>🛍</button>
+
+      </a>
+
+      <!-- ================= CARD PRODUTO 2 ================= -->
+      <a href="produto2.html" class="card-produto">
+
+          <!-- Desconto -->
+          <span class="desconto">-20%</span>
+
+          <!-- Favorito -->
+          <span class="favorito">♡</span>
+
+          <!-- Imagem -->
+          <img src="imagens/perfume2.jpg" alt="Perfume Y">
+
+          <!-- Marca -->
+          <h3>YSL</h3>
+
+          <!-- Nome -->
+          <p class="nome">Y Eau de Parfum 100ml</p>
+
+          <!-- Avaliação -->
+          <div class="stars">★★★★★</div>
+
+          <!-- Preço antigo -->
+          <p class="antigo">R$ 450,00</p>
+
+          <!-- Preço atual -->
+          <p class="preco">R$ 360,00</p>
+
+          <!-- Parcelado -->
+          <p class="parcelado">10x R$ 36,00</p>
+
+          <!-- Botão -->
+          <button>🛍</button>
+
+      </a>
+
+  </div>
+
+</section>
 <!-- Importa o JavaScript -->
 <script src="script.js"></script> <!-- Conecta o JS -->
 

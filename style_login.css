@@ -1,0 +1,149 @@
+/* Reset básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body{
+    font-family:'Times New Roman', Times, serif;
+    background: #dedede;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container principal */
+.container{
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+/* Logo */
+.logo{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+/* Caixa branca */
+.login{
+    background: rgb(144, 144, 144);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+/* Título */
+.login h2{
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* Texto */
+.login p{
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+/* Grupo input */
+.input-group{
+    margin-bottom: 15px;
+}
+
+/* Campo email */
+.input-group input{
+    width: 100%;
+    padding: 14px;
+    border: 2px solid red;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Texto erro */
+.erro{
+    display: block;
+    color: rgb(255, 0, 0);
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Link recuperar email */
+.link-email{
+    display: block;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+/* Botão principal */
+form button{
+    width: 100%;
+    padding: 15px;
+    background: #688b00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Linha divisória */
+.divisoria{
+    display: flex;
+    align-items: center;
+    margin: 35px 0 20px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+/* Linhas laterais */
+.divisoria::before,
+.divisoria::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #688b00;
+}
+
+.divisoria span{
+    margin: 0 10px;
+}
+
+/* Botão Google */
+.google-btn{
+    width: 100%;
+    padding: 14px;
+    background: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Texto captcha */
+.captcha{
+    text-align: center;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+/* Rodapé */
+.links{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.links a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}

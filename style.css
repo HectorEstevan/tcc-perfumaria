@@ -3,7 +3,7 @@
   margin: 0; /* Remove margem padrão */
   padding: 0; /* Remove espaçamento interno padrão */
   box-sizing: border-box; /* Faz padding e border não aumentarem o tamanho do elemento */
-  font-family: Arial, sans-serif; /* Define fonte padrão */
+  font-family:'Times New Roman', Times, serif /* Define fonte padrão */
 }
 
 /* ================= CORPO DA PÁGINA ================= */
@@ -99,80 +99,125 @@ body {
   font-weight: bold; /* Negrito */
 }
 
-/* ================= PRODUTOS ================= */
-body {
-  font-family: Arial; /* Fonte padrão (repetido, pode remover se quiser) */
+/* ================= ÁREA TOTAL DOS PRODUTOS ================= */
+.produtos{
+  padding: 40px; /* Espaço interno da seção */
 }
 
-/* Container dos produtos */
-.container {
-  display: flex; /* Coloca produtos lado a lado */
-  gap: 20px; /* Espaço entre produtos */
+/* Título da seção */
+.produtos h2{
+  margin-bottom: 20px; /* Espaço abaixo */
+  font-size: 30px; /* Tamanho do texto */
 }
 
-/* Card de produto */
-.produto {
-  border: 1px solid rgb(0, 0, 0); /* Borda preta */
-  padding: 10px; /* Espaço interno */
-  width: 200px; /* Largura fixa */
+/* ================= GRID DOS PRODUTOS ================= */
+.produtos-grid{
+  display: grid; /* Ativa grid */
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); /* Responsivo */
+  gap: 20px; /* Espaço entre cards */
 }
 
-/* Preço */
-.preco {
-  color: green; /* Cor verde */
-  font-weight: bold; /* Negrito */
+/* ================= CARD DO PRODUTO ================= */
+.card-produto{
+  position: relative; /* Base para elementos absolutos */
+  background: rgb(255, 255, 255); /* Fundo branco */
+  border: 1px solid rgb(172, 172, 172); /* Borda cinza */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 15px; /* Espaço interno */
+  text-decoration: none; /* Remove sublinhado */
+  color: rgb(0, 0, 0); /* Texto preto */
+  transition: 0.3s; /* Animação suave */
 }
 
-/* Imagem do produto */
-.produto img {
-  width: 100%; /* Ocupa toda largura */
-  height: 150px; /* Altura fixa */
-  object-fit: cover; /* Ajusta imagem sem distorcer */
+/* Efeito hover no card */
+.card-produto:hover{
+  transform: translateY(-5px); /* Sobe card */
+  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.12); /* Sombra */
 }
 
-/* Botões dentro do produto */
-.acoes {
-  display: flex; /* Ativa flexbox */
-  flex-direction: column; /* Coloca em coluna */
-  gap: 5px; /* Espaço entre botões */
-  margin-top: 10px; /* Espaço acima */
+/* ================= DESCONTO ================= */
+.desconto{
+  position: absolute; /* Fica no topo */
+  top: 10px;
+  left: 10px;
+  background: #4d7c59; /* Fundo verde */
+  color: #fff; /* Texto branco */
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 13px;
 }
 
-/* Estilo geral dos botões */
-.acoes button {
-  padding: 8px; /* Espaço interno */
-  border: none; /* Remove borda */
-  cursor: pointer; /* Cursor de clique */
-  border-radius: 5px; /* Bordas arredondadas */
-  color: rgb(255, 255, 255); /* Texto branco */
-  font-weight: bold; /* Negrito */
+/* ================= FAVORITO ================= */
+.favorito{
+  position: absolute; /* Fica no topo direito */
+  top: 10px;
+  right: 12px;
+  font-size: 22px;
+  color: teal;
 }
 
-/* Botão comprar */
-.comprar {
-  background-color: #28a745; /* Verde */
-}
-.comprar:hover {
-  background-color: #1e7e34; /* Verde escuro */
-}
-
-/* Botão carrinho */
-.carrinho {
-  background-color: #007bff; /* Azul */
-}
-.carrinho:hover {
-  background-color: #0056b3; /* Azul escuro */
+/* ================= IMAGEM ================= */
+.card-produto img{
+  width: 100%; /* Largura total */
+  height: 180px; /* Altura fixa */
+  object-fit: contain; /* Mostra imagem inteira */
+  margin-bottom: 10px;
 }
 
-/* Botão detalhes */
-.detalhes {
-  background-color: #ff1e00; /* Vermelho */
-}
-.detalhes:hover {
-  background-color: #540a0a; /* Vermelho escuro */
+/* ================= MARCA ================= */
+.card-produto h3{
+  font-size: 15px;
+  margin-bottom: 5px;
 }
 
-/* ================= CARROSSEL ================= */
+/* ================= NOME ================= */
+.nome{
+  font-size: 17px;
+  min-height: 50px; /* Mantém padrão */
+}
+
+/* ================= ESTRELAS ================= */
+.stars{
+  color: orange; /* Cor estrelas */
+  margin: 8px 0;
+}
+
+/* ================= PREÇO ANTIGO ================= */
+.antigo{
+  text-decoration: line-through; /* Risca preço */
+  color: gray;
+  font-size: 14px;
+}
+
+/* ================= PREÇO ATUAL ================= */
+.preco{
+  font-size: 28px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* ================= PARCELAMENTO ================= */
+.parcelado{
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+/* ================= BOTÃO ================= */
+.card-produto button{
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: teal;
+  color: white;
+  border-radius: 8px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Hover botão */
+.card-produto button:hover{
+  background: #006666;
+}/* ================= CARROSSEL ================= */
 .carrossel {
   position: relative; /* Base para elementos internos */
   width: 100%; /* Largura total */

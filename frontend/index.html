@@ -49,33 +49,101 @@
     </nav> <!-- Fim do menu -->
 </header> <!-- Fim do header -->
 
-<!-- ================= CARROSSEL ================= -->
-<section class="carrossel"> <!-- Seção do carrossel -->
+<!-- ================= IMPORTAÇÃO CSS SWIPER ================= -->
+<!-- Biblioteca visual do carrossel -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-  <!-- Slide 1 -->
-  <div class="slide active"> <!-- Slide visível inicialmente -->
-      <img src="imagens/perfume1.jpg" alt="Promoção 1"> <!-- Imagem -->
-      <div class="texto">texto pro carrossel</div> <!-- Texto sobre imagem -->
-  </div>
 
-  <!-- Slide 2 -->
-  <div class="slide"> <!-- Slide escondido -->
-      <img src="imagens/perfume2.jpg" alt="Promoção 2">
-      <div class="texto">texto pro carrossel</div>
-  </div>
+<!-- ================= CARROSSEL HERO ================= -->
+<section class="hero-slider"> <!-- Área total do banner -->
 
-  <!-- Slide 3 -->
-  <div class="slide"> <!-- Slide escondido -->
-      <img src="imagens/perfume3.jpg" alt="Promoção 3">
-      <div class="texto">texto pro carrossel</div>
-  </div>
+    <!-- Container principal do slider -->
+    <div class="swiper myHeroSlider">
 
-  <!-- Botões de navegação do carrossel -->
-  <button class="prev">&#10094;</button> <!-- Botão para voltar -->
-  <button class="next">&#10095;</button> <!-- Botão para avançar -->
+        <!-- Área onde ficam todos os slides -->
+        <div class="swiper-wrapper">
 
-</section> <!-- Fim do carrossel -->
 
+            <!-- ================= SLIDE 1 ================= -->
+            <div class="swiper-slide slide-item">
+
+                <!-- Imagem do banner -->
+                <img src="imagens/perfume1.jpg" alt="Perfume 1">
+
+                <!-- Texto em cima da imagem -->
+                <div class="overlay">
+
+                    <!-- Título -->
+                    <h2>Million Eau de Toilette</h2>
+
+                    <!-- Texto menor -->
+                    <p>Luxo em forma de fragrância. Notas marcantes e sofisticadas para homens confiantes que querem presença inesquecível.</p>
+
+                    <!-- Botão -->
+                    <a href="#">COMPRAR AGORA</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= SLIDE 2 ================= -->
+            <div class="swiper-slide slide-item">
+
+                <!-- Imagem -->
+                <img src="imagens/perfume2.jpg" alt="Perfume 2">
+
+                <!-- Texto -->
+                <div class="overlay">
+
+                    <h2>Y Eau de Parfum</h2>
+                    <p>Elegância moderna e intensidade envolvente. Uma fragrância marcante para homens determinados, confiantes e cheios de atitude.</p>
+                    <a href="#">VER OFERTAS</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= SLIDE 3 ================= -->
+            <div class="swiper-slide slide-item">
+
+                <!-- Imagem -->
+                <img src="imagens/perfume3.jpg" alt="Perfume 3">
+
+                <!-- Texto -->
+                <div class="overlay">
+
+                    <h2>Botica 214 Dark Mint</h2>
+                    <p>Frescor intenso com personalidade marcante. Uma fragrância moderna e sofisticada para quem busca exclusividade em cada detalhe.</p>
+                    <a href="#">LANÇAMENTOS</a>
+
+                </div>
+
+            </div>
+
+
+        </div> <!-- Fim swiper-wrapper -->
+
+
+        <!-- ================= BOLINHAS ================= -->
+        <div class="swiper-pagination"></div>
+
+
+        <!-- ================= SETAS ================= -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div> <!-- Fim swiper -->
+
+</section>
+
+
+<!-- ================= IMPORTAÇÃO JS SWIPER ================= -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Seu JS -->
+<script src="script.js"></script>
 <!-- ================= PRODUTOS ================= -->
 <br><br>
 <h1>Perfumaria</h1> <!-- Título principal da página -->
@@ -93,7 +161,7 @@
   <div class="produtos-grid">
 
       <!-- ================= CARD PRODUTO 1 ================= -->
-      <a href="produto1.html" class="card-produto"> <!-- Card clicável -->
+      <a href="produto1.html?id=1" class="card-produto"> <!-- Card clicável -->
 
           <!-- Etiqueta de desconto -->
           <span class="desconto">-15%</span>
@@ -128,7 +196,7 @@
       </a>
 
       <!-- ================= CARD PRODUTO 2 ================= -->
-      <a href="produto2.html" class="card-produto">
+      <a href="produto1.html?id=1" class="card-produto">
 
           <!-- Desconto -->
           <span class="desconto">-20%</span>
@@ -161,6 +229,146 @@
           <button>🛍</button>
 
       </a>
+
+      <!-- ================= CARD PRODUTO 3 ================= -->
+      <a href="produto1.html?id=1" class="card-produto">
+
+        <!-- Desconto -->
+        <span class="desconto">-20%</span>
+
+        <!-- Favorito -->
+        <span class="favorito">♡</span>
+
+        <!-- Imagem -->
+        <img src="imagens/perfume3.jpg" alt="Perfume Y">
+
+        <!-- Marca -->
+        <h3>O Boticário</h3>
+
+        <!-- Nome -->
+        <p class="nome"> Botica 214 Dark Mint </p>
+
+        <!-- Avaliação -->
+        <div class="stars">★★★★★</div>
+
+        <!-- Preço antigo -->
+        <p class="antigo">R$ 750,00</p>
+
+        <!-- Preço atual -->
+        <p class="preco">R$ 560,00</p>
+
+        <!-- Parcelado -->
+        <p class="parcelado">10x R$ 36,00</p>
+
+        <!-- Botão -->
+        <button>🛍</button>
+
+    </a>
+    
+    <!-- ================= CARD PRODUTO 4 ================= -->
+    <a href="produto1.html?id=1" class="card-produto">
+
+        <!-- Desconto -->
+        <span class="desconto">-20%</span>
+
+        <!-- Favorito -->
+        <span class="favorito">♡</span>
+
+        <!-- Imagem -->
+        <img src="imagens/perfume4.jpg" alt="Perfume Y">
+
+        <!-- Marca -->
+        <h3>Dior</h3>
+
+        <!-- Nome -->
+        <p class="nome"> Sauvage Eau de Toilette </p>
+
+        <!-- Avaliação -->
+        <div class="stars">★★★★★</div>
+
+        <!-- Preço antigo -->
+        <p class="antigo">R$ 550,00</p>
+
+        <!-- Preço atual -->
+        <p class="preco">R$ 400,00</p>
+
+        <!-- Parcelado -->
+        <p class="parcelado">10x R$ 36,00</p>
+
+        <!-- Botão -->
+        <button>🛍</button>
+
+    </a>
+
+    <!-- ================= CARD PRODUTO 5 ================= -->
+    <a href="produto1.html?id=1" class="card-produto">
+
+        <!-- Desconto -->
+        <span class="desconto">-20%</span>
+
+        <!-- Favorito -->
+        <span class="favorito">♡</span>
+
+        <!-- Imagem -->
+        <img src="imagens/perfume5.jpg" alt="Perfume Y">
+
+        <!-- Marca -->
+        <h3>Celine</h3>
+
+        <!-- Nome -->
+        <p class="nome"> Celine Parade </p>
+
+        <!-- Avaliação -->
+        <div class="stars">★★★★★</div>
+
+        <!-- Preço antigo -->
+        <p class="antigo">R$ 650,00</p>
+
+        <!-- Preço atual -->
+        <p class="preco">R$ 560,00</p>
+
+        <!-- Parcelado -->
+        <p class="parcelado">10x R$ 36,00</p>
+
+        <!-- Botão -->
+        <button>🛍</button>
+
+    </a>
+
+    <!-- ================= CARD PRODUTO 6 ================= -->
+    <a href="produto1.html?id=1" class="card-produto">
+
+        <!-- Desconto -->
+        <span class="desconto">-20%</span>
+
+        <!-- Favorito -->
+        <span class="favorito">♡</span>
+
+        <!-- Imagem -->
+        <img src="imagens/perfume6.jpg" alt="Perfume Y">
+
+        <!-- Marca -->
+        <h3> Lattafa </h3>
+
+        <!-- Nome -->
+        <p class="nome">Al Noble Safeer</p>
+
+        <!-- Avaliação -->
+        <div class="stars">★★★★★</div>
+
+        <!-- Preço antigo -->
+        <p class="antigo">R$ 950,00</p>
+
+        <!-- Preço atual -->
+        <p class="preco">R$ 760,00</p>
+
+        <!-- Parcelado -->
+        <p class="parcelado">10x R$ 36,00</p>
+
+        <!-- Botão -->
+        <button>🛍</button>
+
+    </a>
 
   </div>
 

@@ -113,161 +113,195 @@ body {
 /* ================= GRID DOS PRODUTOS ================= */
 .produtos-grid{
   display: grid; /* Ativa grid */
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); /* Responsivo */
-  gap: 20px; /* Espaço entre cards */
+  
+  /* Agora cards menores */
+  grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
+
+  justify-content: center; /* Centraliza os cards */
+  gap: 18px; /* Espaço entre eles */
 }
+
 
 /* ================= CARD DO PRODUTO ================= */
 .card-produto{
-  position: relative; /* Base para elementos absolutos */
-  background: rgb(255, 255, 255); /* Fundo branco */
-  border: 1px solid rgb(172, 172, 172); /* Borda cinza */
-  border-radius: 10px; /* Bordas arredondadas */
-  padding: 15px; /* Espaço interno */
-  text-decoration: none; /* Remove sublinhado */
-  color: rgb(0, 0, 0); /* Texto preto */
-  transition: 0.3s; /* Animação suave */
+  position: relative;
+  background: #fff;
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 10px;
+
+  padding: 12px; /* Menor espaço interno */
+
+  width: 220px; /* Largura fixa menor */
+  min-height: 430px; /* Altura menor */
+
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s;
 }
 
-/* Efeito hover no card */
+
+/* Hover */
 .card-produto:hover{
-  transform: translateY(-5px); /* Sobe card */
-  box-shadow: 0 10px 20px rgba(255, 0, 0, 0.12); /* Sombra */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.10);
 }
 
-/* ================= DESCONTO ================= */
-.desconto{
-  position: absolute; /* Fica no topo */
-  top: 10px;
-  left: 10px;
-  background: #4d7c59; /* Fundo verde */
-  color: #fff; /* Texto branco */
-  padding: 3px 8px;
-  border-radius: 5px;
-  font-size: 13px;
-}
-
-/* ================= FAVORITO ================= */
-.favorito{
-  position: absolute; /* Fica no topo direito */
-  top: 10px;
-  right: 12px;
-  font-size: 22px;
-  color: teal;
-}
 
 /* ================= IMAGEM ================= */
 .card-produto img{
-  width: 100%; /* Largura total */
-  height: 180px; /* Altura fixa */
-  object-fit: contain; /* Mostra imagem inteira */
+  width: 100%;
+  height: 150px; /* Imagem menor */
+  object-fit: contain;
   margin-bottom: 10px;
 }
 
+
 /* ================= MARCA ================= */
 .card-produto h3{
-  font-size: 15px;
-  margin-bottom: 5px;
+  font-size: 14px;
+  margin-bottom: 4px;
 }
+
 
 /* ================= NOME ================= */
 .nome{
-  font-size: 17px;
-  min-height: 50px; /* Mantém padrão */
+  font-size: 15px;
+  min-height: 42px;
 }
 
-/* ================= ESTRELAS ================= */
-.stars{
-  color: orange; /* Cor estrelas */
-  margin: 8px 0;
+
+/* ================= PREÇO ================= */
+.preco{
+  font-size: 20px; /* Menor */
+  font-weight: bold;
 }
 
 /* ================= PREÇO ANTIGO ================= */
 .antigo{
-  text-decoration: line-through; /* Risca preço */
-  color: gray;
-  font-size: 14px;
-}
+  font-size: 14px; /* Tamanho menor */
+  color: gray; /* Cor cinza */
 
-/* ================= PREÇO ATUAL ================= */
-.preco{
-  font-size: 28px;
-  font-weight: bold;
-  color: #000;
+  text-decoration: line-through; /* Linha riscada */
+  text-decoration-thickness: 2px; /* Espessura do risco */
+  text-decoration-color: #777; /* Cor da linha */
+
+  margin-bottom: 4px; /* Espaço abaixo */
+  display: block; /* Fica em linha separada */
 }
 
 /* ================= PARCELAMENTO ================= */
 .parcelado{
-  font-size: 15px;
-  margin-bottom: 15px;
+  font-size: 14px;
 }
+
 
 /* ================= BOTÃO ================= */
 .card-produto button{
-  width: 50px;
-  height: 50px;
+  width: 42px;
+  height: 42px;
   border: none;
   background: teal;
   color: white;
   border-radius: 8px;
-  font-size: 22px;
+  font-size: 18px;
   cursor: pointer;
 }
 
 /* Hover botão */
 .card-produto button:hover{
   background: #006666;
-}/* ================= CARROSSEL ================= */
-.carrossel {
-  position: relative; /* Base para elementos internos */
-  width: 100%; /* Largura total */
-  overflow: hidden; /* Esconde excesso */
-  z-index: 1; /* Fica atrás do menu */
+}
+/* ================= CARROSEL   ================= */
+/* ================= ÁREA TOTAL ================= */
+.hero-slider{
+  width:100%; /* Largura total */
+  height:90vh; /* Altura da tela */
 }
 
-/* Slides */
-.slide {
-  display: none; /* Escondidos por padrão */
-  position: relative; /* Permite posicionamento interno */
+/* ================= CADA SLIDE ================= */
+.slide-item{
+  position:relative; /* Base para texto */
 }
 
-/* Slide ativo */
-.slide.active {
-  display: block; /* Mostra apenas o ativo */
+/* ================= IMAGEM ================= */
+.slide-item img{
+  width: 45%;
+  height:90vh;
+  object-fit:cover; /* Preenche espaço */
 }
 
-/* Imagem do slide */
-.slide img {
-  width: 100%; /* Largura total */
-  height: 400px; /* Altura fixa */
-  object-fit: contain; /* Mostra imagem completa */
-  background: #000000; /* Fundo preto */
+/* ================= CAMADA ESCURA ================= */
+.slide-item::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.35);
 }
 
-/* Texto do carrossel */
-.texto {
-  position: absolute; /* Fica sobre a imagem */
-  bottom: 20px; /* Distância do fundo */
-  left: 30px; /* Distância da esquerda */
-  color: rgb(231, 231, 231); /* Cor do texto */
-  font-size: 2rem; /* Tamanho grande */
+/* ================= TEXTO ================= */
+.overlay{
+  position:absolute;
+  top:50%;
+  left:10%;
+  transform:translateY(-50%);
+  color:#fff;
+  z-index:10;
+  max-width:500px;
 }
 
-/* Botões do carrossel */
-.prev, .next {
-  position: absolute; /* Ficam sobre o slide */
-  top: 50%; /* Central vertical */
-  transform: translateY(-50%); /* Ajuste fino */
-  font-size: 30px; /* Tamanho da seta */
-  background: #688b00; /* Cor verde */
-  color: #f7f7f7; /* Cor branca */
-  border: none; /* Remove borda */
-  padding: 10px; /* Espaço interno */
-  cursor: pointer; /* Cursor de clique */
+/* Título */
+.overlay h2{
+  font-size:60px;
+  margin-bottom:15px;
 }
 
-/* Botão esquerdo */
-.prev { left: 10px; }
+/* Parágrafo */
+.overlay p{
+  font-size:20px;
+  margin-bottom:25px;
+}
 
-/* Botão direito */
-.next { right: 10px; }
+/* Botão */
+.overlay a{
+  display:inline-block;
+  background:#688b00;
+  color:#fff;
+  padding:14px 28px;
+  text-decoration:none;
+  border-radius:30px;
+  transition:0.3s;
+}
+
+/* Hover botão */
+.overlay a:hover{
+  background:#4e6800;
+}
+
+/* ================= SETAS ================= */
+.swiper-button-next,
+.swiper-button-prev{
+  color:#fff;
+}
+
+/* ================= BOLINHA ATIVA ================= */
+.swiper-pagination-bullet-active{
+  background:#fff;
+}
+
+/* ================= RESPONSIVO ================= */
+@media(max-width:768px){
+
+  .hero-slider,
+  .slide-item img{
+      height:70vh;
+  }
+
+  .overlay h2{
+      font-size:34px;
+  }
+
+  .overlay p{
+      font-size:16px;
+  }
+
+}

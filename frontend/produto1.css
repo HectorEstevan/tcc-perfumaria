@@ -1,0 +1,22 @@
+.produto-detalhe{
+    display: flex;
+    gap: 50px;
+    padding: 50px;
+  }
+  
+  .galeria img{
+    width: 350px;
+  }
+  
+  .info{
+    max-width: 400px;
+  }
+  
+  .comprar{
+    margin-top: 20px;
+    padding: 15px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
